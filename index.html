@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" /> -->
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
@@ -364,6 +363,7 @@
 				</div>
 				<div class="col-lg">
 					<div class="clients-img">
+
 						<img src="img/clients_img/img_1.png">
 						<img src="img/clients_img/img_2.png">
 						<img src="img/clients_img/img_3.png">
@@ -749,7 +749,7 @@
 
 	<section id="contact" class="fine-us-here">
 		<div class="container-fluid">
-			<h1 class="title">Fine us <span class="attention">here</span></h1>
+			<h1 class="title">Find us <span class="attention">here</span></h1>
 			<div class="subtitle">Lorem ipsum dolor sit amet, consectetur <span class="attention">adipiscing elit</span>. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </div>
 			<div class="map-wrapper">
 				<div id="map"></div>
@@ -759,8 +759,7 @@
 					</label>
 					<input name="name" type="text" placeholder="Name">
 					<input name="email" type="text" placeholder="Email">
-					<input name="subject" type="text" placeholder="subject">
-					<textarea name="message"></textarea>
+					<textarea name="message" placeholder="Message"></textarea>
 					<button type="submit" class="button">submit</button>
 				</form>
 			</div>
@@ -772,51 +771,31 @@
 	</footer>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script> -->
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script> -->
-	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js" async></script>
 
-	<script async defer
+	<script  defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb7ELTW4HWgrQXWe079-s98UJQGFoHjCw&callback=initMap">
 </script>
 	<script>
-		// Определяем переменную map
 	    let map;
 
-	    // Функция initMap которая отрисует карту на странице
 	    function initMap() {
 
-	        // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
 	        map = new google.maps.Map(document.getElementById('map'), {
-	            // При создании объекта карты необходимо указать его свойства
-	            // center - определяем точку на которой карта будет центрироваться
-	            center: {lat: 26.271756, lng: 32.431323}, 
-	            // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+	            center: {lat: 26.271756, lng: 32.431323},
 	            zoom: 8
 	        });
 
-	        // Создаем маркер на карте
 			let marker = new google.maps.Marker({
-
-			    // Определяем позицию маркера
-			    position: {lat: 25.271756, lng: 30.431323}, 
-
-			    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+			    position: {lat: 25.271756, lng: 30.431323},
 			    map: map,
-
-			    // Пишем название маркера - появится если навести на него курсор и немного подождать
-			    // title: 'Наш маркер: Большой театр'
-
-			     // Укажем свою иконку для маркера
                 icon: 'img/map_mark.png'
 			});
 	    }   
 	</script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>  -->
-	<script src="js/main.js"></script>
+	<script src="js/main.js" async ></script>
 </body>
 </html>

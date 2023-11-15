@@ -30,37 +30,7 @@ $(document).ready(function(){
     let sliderWidth = $slider.width();
     let $slider_clone = $slider.clone( true, true ); // add true, true to clone events too!
 
-    // When someone clicks on a filter
-    $( '.filter-item').on( 'click', function(){
-        let filter_name = $( this ).text();
 
-        // Create a new clone for the slider items
-        let $new_slider = $slider_clone.clone( true, true );
-
-        $( '.filter-item').css('color', '#a4a4a4');
-        $(this).css('color', '#ff0036');
-
-        // Clear current slider
-        $slider.slick( 'unslick' ); // Remove slick
-        $slider.empty(); // Remove elements
-
-        // Show only filtered items
-        if( filter_name == "All" ) { 
-
-            $slider.append( $new_slider.find( '.portfolio-slider-item' ) ); 
-        } else { 
-
-            $slider.append( $new_slider.find( `.portfolio-slider-item.${$(this).attr("id")}`));
-        }
-
-        let rows = $('#portfolio-slider .portfolio-slider-item').length < 4 ? 1 : 2;
-        
-        // Slick slider init or call your function that does it like I do
-        init_projecten_slider($slider, rows);
-        $('#portfolio-slider .slick-slide').width(sliderWidth);
-    });
-
-    
     $('#clients-slider').slick({
         dots: true,
         infinite: true,
