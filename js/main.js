@@ -26,11 +26,6 @@ $(document).ready(function(){
 
     init_projecten_slider($('#portfolio-slider'), 2);
 
-    let $slider = $( '#portfolio-slider' );
-    let sliderWidth = $slider.width();
-    let $slider_clone = $slider.clone( true, true ); // add true, true to clone events too!
-
-
     $('#clients-slider').slick({
         dots: true,
         infinite: true,
